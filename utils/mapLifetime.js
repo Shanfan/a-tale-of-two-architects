@@ -59,10 +59,24 @@ export class PersonLifetime {
             .style('transform', `translateY(${y}px)`)
     }
 
+    drawPrimeProject() {
+        const primeProject = this.person.append('g').attr('class', 'primeProject')
+        const projectName = this.data.primeProject.name
+        const mileStones = this.data.primeProject.events
+        const yAccessor = d => this.scale(d)
+
+        primeProject.selectAll('path')
+            .data(mileStones)
+            .join('path')
+            .attr('d', diamondPath)
+            .style('transform', d => `translateY(${yAccessor(d.year)}px)`)
+    }
 
     mapEvent(year, eventName) {
         this.events.push({ year: year, name: eventName })
     }
+
+
 
 
 }

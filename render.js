@@ -26,4 +26,7 @@ renderWar('.visCanvas .right .wwii', 1937, 1945, scale)
 const utzon = new PersonLifetime(utzonData, '.visCanvas .utzon', scale)
 const gehry = new PersonLifetime(gehryData, '.visCanvas .gehry', scale)
 
+gehry.drawPrimeProject()
+utzon.drawPrimeProject()
+
 
