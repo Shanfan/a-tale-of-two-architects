@@ -1,6 +1,7 @@
 import { PersonLifetime } from './utils/mapLifetime.js'
 import { layYearMarks, renderWar } from './utils/mapMetaMarks.js'
 import utzonData from './data/utzon.json' assert {type: "json"}
+import gehryData from './data/gehry.json' assert {type: "json"}
 
 const canvas = document.querySelector('.visCanvas')
 const dimension = canvas.getBoundingClientRect()
@@ -17,13 +18,12 @@ renderWar('.visCanvas .right .wwi', 1914, 1918, scale)
 renderWar('.visCanvas .left .wwii', 1937, 1945, scale)
 renderWar('.visCanvas .right .wwii', 1937, 1945, scale)
 
-
-
 // renderCareerMark('.early.career', 1952)
 // renderCareerMark('.mid.career', 1967)
 // renderCareerMark('.late.career', 1985)
 // renderCareerMark('.legacy.career', 2000)
 
 const utzon = new PersonLifetime(utzonData, '.visCanvas .utzon', scale)
+const gehry = new PersonLifetime(gehryData, '.visCanvas .gehry', scale)
 
 
