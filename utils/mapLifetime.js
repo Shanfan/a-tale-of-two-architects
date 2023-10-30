@@ -2,6 +2,9 @@ const starPath = "M5.114,5.114l8.177,3.738c0.536,0.246 1.119,0.373 1.709,0.373c0
 const triUpPath = "M15,0l10,13.041l-20,-0l10,-13.041Z"
 const triDownPath = "M15,30l-10,-13.041l20,0l-10,13.041Z"
 const diamondPath = "M15,5.101l-9.899,9.899l9.899,9.899l9.899,-9.899l-9.899,-9.899Z"
+const roundPath = (cx, cy, r) => `M${cx - r}, ${cy} 
+                                  a${r}, ${r} 0 1, 0 ${r * 2}, 0
+                                  a${r}, ${r} 0 1, 0 ${-r * 2}, 0`
 
 export class PersonLifetime {
     constructor(data, selector, scale) {
@@ -20,7 +23,7 @@ export class PersonLifetime {
         const yDeath = this.data.death.year ? this.scale(this.data.death.year) : this.scale(2025)
 
         lifeTime.append('circle')
-            .attr('r', 6)
+            .attr('r', 12)
             .attr('cx', 15)
             .attr('fill', 'none')
             .attr('stroke-width', 2)
@@ -59,24 +62,33 @@ export class PersonLifetime {
             .style('transform', `translateY(${y}px)`)
     }
 
-    drawPrimeProject() {
-        const primeProject = this.person.append('g').attr('class', 'primeProject')
-        const projectName = this.data.primeProject.name
-        const mileStones = this.data.primeProject.events
+    drawEvents(eventType) {
+        let mileStones, shape
+        const eventGroup = this.person.append('g').attr('class', eventType)
         const yAccessor = d => this.scale(d)
 
-        primeProject.selectAll('path')
+        switch (eventType) {
+            case 'prime':
+                mileStones = this.data.primeProject.events
+                shape = diamondPath
+                break;
+            case 'secondary':
+                mileStones = this.data.secondaryProject.events
+                shape = diamondPath
+                break;
+            default:
+            case 'other':
+                mileStones = this.data.otherEvents
+                shape = roundPath(15, 0, 4)
+
+        }
+
+        eventGroup.selectAll('path')
             .data(mileStones)
             .join('path')
-            .attr('d', diamondPath)
+            .attr('d', shape)
             .style('transform', d => `translateY(${yAccessor(d.year)}px)`)
     }
-
-    mapEvent(year, eventName) {
-        this.events.push({ year: year, name: eventName })
-    }
-
-
 
 
 }

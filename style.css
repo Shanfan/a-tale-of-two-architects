@@ -225,6 +225,12 @@ h1 {
     stroke: var(--color);
 }
 
+.lifeSpan .secondary {
+    fill: none;
+    stroke-width: 2px;
+    stroke: rgb(178, 211, 240);
+}
+
 .visCanvas .utzon {
     --color: var(--utzon);
     left: 85%;
