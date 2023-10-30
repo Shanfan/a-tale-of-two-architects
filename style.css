@@ -16,8 +16,6 @@ body {
     background-color: var(--bg);
 }
 
-
-
 .headWrapper {
     position: sticky;
     top: 0;
@@ -98,6 +96,7 @@ h1 {
     padding: 1.5em 0 1.5em 1em;
     background-position: center 85%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    scroll-behavior: smooth;
 }
 
 .column-122 {
@@ -113,7 +112,6 @@ h1 {
     font-weight: 300;
     font-size: 3rem;
     align-self: self-end;
-    /* padding: 0.5rem 0 0.5rem 1rem; */
     z-index: 1;
 }
 

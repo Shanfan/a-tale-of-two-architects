@@ -9,16 +9,13 @@ let slideHeader = tl.addLabel("start")
     .to('.header', { height: 0 })
     .to('.nav', { yPercent: -100 }, "<")
     .to('.title h1', { y: -scrollEnd }, "<")
-    .pause()
-    .addLabel("earlyLife")
 
 let triggerSlideHeader = ScrollTrigger.create({
     animation: slideHeader,
     trigger: '.mainContent',
-    scrub: 1,
     start: `top ${scrollStart}`,
     end: `+=${scrollEnd}`,
-    markers: true,
+    scrub: 1,
 })
 
 
