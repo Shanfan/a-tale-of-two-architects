@@ -1,0 +1,68 @@
+{
+    "birth": {
+        "year": 1918,
+        "description": ""
+    },
+    "death": {
+        "year": 2008,
+        "description": "Utzon passed away. He was survived by his wife, children and grandchildren. Both his sons, Jan and Kim, are trained architects and his daughter, Lin is a designer, muralist and artist."
+    },
+    "pritzker": {
+        "year": 2003,
+        "description": ""
+    },
+    "education": {
+        "start": 1937,
+        "end": 1942,
+        "name": "Royal Danish Academy of Fine Arts",
+        "description": ""
+    },
+    "primeProject": {
+        "name": "Sydney Opera House",
+        "events": [
+            {
+                "year": 1957,
+                "eventName": "Utzon won design prize",
+                "description": ""
+            },
+            {
+                "year": 1959,
+                "eventName": "Construction begins",
+                "description": ""
+            },
+            {
+                "year": 1962,
+                "eventName": "The spherical solution",
+                "description": ""
+            },
+            {
+                "year": 1966,
+                "eventName": "Utzon left Austrilia",
+                "description": ""
+            },
+            {
+                "year": 1973,
+                "eventName": "Opera House grand opening",
+                "description": "Queen Elizabeth II gave the opening speach, in which Jørn Utzon was not mentioned. Utzon declined the invitation to attend the opening. He never returned to Austrilia for the rest of his life."
+            }
+        ]
+    },
+    "otherEvents": [
+        {
+            "year": 1950,
+            "description": "Utzon established his own studio."
+        },
+        {
+            "year": 1952,
+            "description": "Utzon built his family residence in Hellebæk, Denmark. Its innovative design was welcomed by the world of architecture."
+        },
+        {
+            "year": 2004,
+            "description": "The Reception Hall of Sydney Opera House was redesigned by Utzon, and was renamed &ldquo;the Utzon Room&rdquo; in his honour."
+        },
+        {
+            "year": 2007,
+            "description": "Sydney Opera House was declared a World Heritage Site; Utzon became only the second living architect to have received such recognition."
+        }
+    ]
+}
