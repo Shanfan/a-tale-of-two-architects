@@ -93,10 +93,12 @@ h1 {
 .mainContent {
     position: relative;
     width: 100%;
+    min-height: 300px;
     padding: 1.5em 0 1.5em 1em;
     background-position: center 85%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     scroll-behavior: smooth;
+    transition: 0.5s all ease-in-out;
 }
 
 .column-122 {

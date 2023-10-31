@@ -2,13 +2,37 @@ import { PersonLifetime } from './utils/mapLifetime.js'
 import { layYearMarks, renderWar } from './utils/mapMetaMarks.js'
 import utzonData from './data/utzon.json' assert {type: "json"}
 import gehryData from './data/gehry.json' assert {type: "json"}
+import getDimensions from './utils/getDimensions.js'
 
-const canvas = document.querySelector('.visCanvas')
-const dimension = canvas.getBoundingClientRect()
 
-const scale = d3.scaleLinear()
-    .range([0, dimension.height])
+export const scale = d3.scaleLinear()
+    .range([0, getDimensions('.visCanvas').height])
     .domain([1912, 2022])
+
+export const utzonEvents = getEventsData(utzonData)
+export const gehryEvents = getEventsData(gehryData)
+
+function getEventsData(data) {
+    const events = []
+    events.push(data.birth, data.death, data.pritzker)
+
+    data.primeProject.events.forEach(d => {
+        events.push({ "year": d.year, "description": d.description })
+    })
+
+    if (data.secondaryProject) {
+        data.secondaryProject.events.forEach(d => {
+            events.push({ "year": d.year, "description": d.description })
+        })
+    }
+
+    data.otherEvents.forEach(d => {
+        events.push({ "year": d.year, "description": d.description })
+    })
+
+    return events
+}
+
 
 layYearMarks('.visCanvas .left .yearMarks', scale);
 layYearMarks('.visCanvas .right .yearMarks', scale);

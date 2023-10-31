@@ -1,22 +1,58 @@
+import { scale, utzonEvents, gehryEvents } from './render.js'
+import getDimensions from './utils/getDimensions.js'
+
 const tl = gsap.timeline({
     defaults: { duration: 1, ease: "linear" },
 })
 
-let scrollStart = document.querySelector('.mainContent').getBoundingClientRect().top;
-let scrollEnd = document.querySelector('.header').getBoundingClientRect().height;
+const slideHeaderStart = getDimensions('.mainContent').top;
+const slideHeaderEnd = getDimensions('.header').height
 
 let slideHeader = tl.addLabel("start")
     .to('.header', { height: 0 })
     .to('.nav', { yPercent: -100 }, "<")
-    .to('.title h1', { y: -scrollEnd }, "<")
+    .to('.title h1', { y: -slideHeaderEnd }, "<")
 
-let triggerSlideHeader = ScrollTrigger.create({
+ScrollTrigger.create({
     animation: slideHeader,
     trigger: '.mainContent',
-    start: `top ${scrollStart}`,
-    end: `+=${scrollEnd}`,
+    start: `top ${slideHeaderStart}`,
+    end: `+=${slideHeaderEnd}`,
     scrub: 1,
 })
+
+
+const updateAnnoucerStart = `${scale(1918)}px ${getDimensions('.headWrapper').bottom}px`
+const updateAnnoucerEnd = `+=${getDimensions('.visCanvas').height - scale(1918)}`
+
+let updateAnnoucer = tl.addLabel("updateAnnouncer")
+    .to('.announcer', {
+        scrollTrigger: {
+            trigger: '.visCanvas',
+            start: updateAnnoucerStart,
+            ened: updateAnnoucerEnd,
+            onUpdate: () => {
+                const year = Math.round(
+                    scale.invert(
+                        getDimensions('.headWrapper').bottom - getDimensions('.visCanvas').top
+                    ))
+                document.querySelector('.announcer').textContent = year
+
+                utzonEvents.forEach(el => {
+                    if (year == el.year) {
+                        document.querySelector('.utzon.content p').innerHTML = el.description
+                    }
+                })
+
+                gehryEvents.forEach(el => {
+                    if (year == el.year) {
+                        document.querySelector('.gehry.content p').innerHTML = el.description
+                    }
+                })
+            },
+            scrub: 1,
+        }
+    })
 
 
 
