@@ -33,6 +33,8 @@ function getEventsData(data) {
     return events
 }
 
+document.querySelector('.utzon.content p').innerHTML = utzonEvents.find(event => event.year === 1918).description
+document.querySelector('.gehry.content p').innerHTML = gehryEvents.find(event => event.year === 1929).description
 
 layYearMarks('.visCanvas .left .yearMarks', scale);
 layYearMarks('.visCanvas .right .yearMarks', scale);

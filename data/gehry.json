@@ -1,7 +1,7 @@
 {
     "birth": {
         "year": 1929,
-        "description": ""
+        "description": "Frank Gehry was born in a working-class Jewish neighborhood of Toronto, Canada, in 1929. He remembered vividly watching carp swimming in the bathtub while his grandmother prepared to make gefilte fish in the kitchen. The fish form would later became a constant theme in his work."
     },
     "death": {
         "year": null,
@@ -23,7 +23,7 @@
             {
                 "year": 1987,
                 "eventName": "Desney Concert Hall Project initiation",
-                "description": ""
+                "description": "Desney Concert Hall project was initiated in 1987. Gehry won the design competition, and completed the design in 1991."
             },
             {
                 "year": 1991,
@@ -79,7 +79,7 @@
         },
         {
             "year": 1947,
-            "description": "Gehry's family migrated to California from Toronto, Canada. He got a job driving a delivery truck and studied at LA City College. He has been handy and imaginative since childhood, but he didn&rsquo; settle in architecture until he tried various classes."
+            "description": "Gehry's family migrated to California from Toronto in 1947. He got a job driving a delivery truck and studied at LA City College. He has been handy and imaginative since childhood, but he didn&rsquo; settle in architecture until he tried various classes."
         },
         {
             "year": 1954,
@@ -91,7 +91,11 @@
         },
         {
             "year": 1977,
-            "description": "Gehry and his wife bought a bungalow in LA, originally built in 1920. He remodeled the house exercising maxium creative freedom, and the outcome struck up controversy in his neighborhood while earning him attention from the architecture professionals."
+            "description": "Gehry and his wife Berta bought a bungalow in LA, originally built in 1920. At the time Gehry was working largely on generic developments, squeezing any concessions he could out of clients in attempts to create something of architectural value."
+        },
+        {
+            "year": 1978,
+            "description": "Berta encouraged Gehry to fully exercise his creative ideas, and he did. The original front door became part of the living room, the kitchen was paved in black top, stud walls were left exposed. The effect was to obscure the boundaries between inside and out, rejecting typical suburban smugness in favor of a more loosely defined version of urban disarray. (<a href='https://www.latimes.com/archives/la-xpm-1998-oct-25-tm-35829-story.html' target='_blank'>LA Times</a>)"
         }
     ]
 }

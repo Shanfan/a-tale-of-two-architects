@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.5s all ease-in-out;
 }
 
 body {
@@ -93,12 +94,11 @@ h1 {
 .mainContent {
     position: relative;
     width: 100%;
-    min-height: 300px;
+    /* min-height: 260px; */
     padding: 1.5em 0 1.5em 1em;
     background-position: center 85%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     scroll-behavior: smooth;
-    transition: 0.5s all ease-in-out;
 }
 
 .column-122 {
@@ -200,7 +200,7 @@ h1 {
     z-index: -1;
     position: absolute;
     width: 120%;
-    font-size: 3rem;
+    font-size: 1rem;
     color: var(--bg);
     text-align: center;
     display: grid;
@@ -208,12 +208,12 @@ h1 {
 }
 
 .left .warYears {
-    background: linear-gradient(90deg, rgba(58, 35, 35, 0.9) 80%, rgba(58, 35, 35, 0));
+    background: linear-gradient(90deg, rgba(71, 82, 105, 0.9) 70%, rgba(71, 82, 105, 0));
 }
 
 .right .warYears {
     left: -20%;
-    background: linear-gradient(-90deg, rgba(58, 35, 35, 0.9) 80%, rgba(58, 35, 35, 0));
+    background: linear-gradient(-90deg, rgba(71, 82, 105, 0.9) 70%, rgba(71, 82, 105, 0));
 }
 
 .lifeSpan {
@@ -255,4 +255,6 @@ h1 {
 .footer {
     height: calc(100vh - 400px);
     background: #10141c;
+    color: rgba(71, 82, 105, 0.9);
+    padding: 1rem;
 }

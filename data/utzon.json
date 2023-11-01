@@ -1,7 +1,7 @@
 {
     "birth": {
         "year": 1918,
-        "description": ""
+        "description": "Jørn Utzon was born in Copenhagen, Denmark. While in secondary school, he began helping his father, director of a shipyard, and a brilliant naval architect, by studying new designs, drawing up plans and making models. He thought he might train to be a naval architect like his father."
     },
     "death": {
         "year": 2008,
@@ -15,7 +15,7 @@
         "start": 1937,
         "end": 1942,
         "name": "Royal Danish Academy of Fine Arts",
-        "description": ""
+        "description": "However, one of his father’s cousins, Einar Utzon-Frank, was a sculptor and professor at the Royal Academy of Fine Arts. Under his influence, Utzon took an interest in sculpting, and after secondary school, he won admission to the Royal Academy of Fine Arts in Copenhagen."
     },
     "primeProject": {
         "name": "Sydney Opera House",
