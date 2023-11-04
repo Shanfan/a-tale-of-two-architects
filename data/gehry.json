@@ -1,7 +1,7 @@
 {
     "birth": {
         "year": 1929,
-        "description": "Frank Gehry was born in a working-class Jewish neighborhood of Toronto, Canada, in 1929. He remembered vividly watching carp swimming in the bathtub while his grandmother prepared to make gefilte fish in the kitchen. The fish form would later became a constant theme in his work."
+        "description": "Frank Gehry was born in a working-class Jewish neighborhood of Toronto, Canada, in 1929. He remembered vividly watching carp swimming in the bathtub while his grandmother prepared to make gefilte fish in the kitchen. The fish form would later become a constant theme in his work."
     },
     "death": {
         "year": null,
@@ -22,8 +22,8 @@
         "events": [
             {
                 "year": 1987,
-                "eventName": "Desney Concert Hall Project initiation",
-                "description": "Desney Concert Hall project was initiated in 1987. Gehry won the design competition, and completed the design in 1991."
+                "eventName": "Disney Concert Hall Project initiation",
+                "description": "Disney Concert Hall project was initiated in 1987. Gehry won the design competition, and completed the design in 1991."
             },
             {
                 "year": 1991,

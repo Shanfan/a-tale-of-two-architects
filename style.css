@@ -255,6 +255,7 @@ h1 {
 .footer {
     height: calc(100vh - 400px);
     background: #10141c;
-    color: rgba(71, 82, 105, 0.9);
+    color: rgb(136, 139, 147);
     padding: 1rem;
+    font-size: 0.9rem;
 }
