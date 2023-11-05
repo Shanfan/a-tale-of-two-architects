@@ -1,0 +1,58 @@
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    gap: 10px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, [col] 1fr);
+    gap: 0;
+    width: 100%;
+}
+
+.grid__colspan_2 {
+    grid-column-end: span 2;
+}
+
+.grid__colspan_3 {
+    grid-column-end: span 3;
+}
+
+.grid__colspan_4 {
+    grid-column-end: span 4;
+}
+
+.grid__colspan_5 {
+    grid-column-end: span 5;
+}
+
+.grid__colspan_6 {
+    grid-column-end: span 6;
+}
+
+.grid__colpush_1 {
+    grid-column-start: col 2;
+}
+
+.grid__colpush_2 {
+    grid-column-start: col 3;
+}
+
+.grid__colpush_3 {
+    grid-column-start: col 4;
+}
+
+.grid__colpush_4 {
+    grid-column-start: col 5;
+}
+
+.grid__colpush_5 {
+    grid-column-start: col 6;
+}
+
+.grid__colpush_6 {
+    grid-column-start: col 7;
+}
