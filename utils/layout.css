@@ -1,8 +1,14 @@
+:root {
+    --maxWidth: 1240px;
+    --midWidth: 1000px;
+    --minWidth: 768px;
+}
+
 .grid-12 {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
     gap: 10px;
-    max-width: 1280px;
+    max-width: var(--maxWidth);
     margin: 0 auto;
 }
 
@@ -55,4 +61,33 @@
 
 .grid__colpush_6 {
     grid-column-start: col 7;
+}
+
+.grid__colpush_7 {
+    grid-column-start: col 8;
+}
+
+.grid__colpush_9 {
+    grid-column-start: col 10;
+}
+
+.grid__colpush_10 {
+    grid-column-start: col 11;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+.viewport {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewport header {
+    flex-grow: 1;
 }

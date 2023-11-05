@@ -11,6 +11,10 @@ a {
     color: #8FD1F6;
 }
 
+header {
+    color: white;
+}
+
 footer {
     color: #839AAE;
     background: var(--bg-dark);
@@ -18,6 +22,12 @@ footer {
 
 footer h3 {
     color: #BEC6CE;
+}
+
+.heroImg section {
+    width: 100%;
+    background: #02081299;
+    backdrop-filter: blur(2px);
 }
 
 .exposition {

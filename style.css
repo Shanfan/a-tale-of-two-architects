@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.5s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 
 .heroImg {
@@ -22,4 +22,42 @@
 .narrationWrapper {
     padding: 1em;
     margin: 1em 0;
+    backdrop-filter: blur(2px);
+}
+
+.title {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title h1 {
+    z-index: 1;
+}
+
+.title:before {
+    content: '';
+    width: 400px;
+    height: 60px;
+    opacity: 50%;
+    position: absolute;
+    background: rgba(190, 61, 49, 0.75);
+    transform: translate(-40%, -1em);
+}
+
+.title:after {
+    content: '';
+    width: 400px;
+    height: 60px;
+    opacity: 50%;
+    position: absolute;
+    background: rgba(54, 98, 207, 0.75);
+    transform: translate(40%, 1em);
+}
+
+.scrollIndicator {
+    text-align: center;
+    margin-top: 2em;
 }
