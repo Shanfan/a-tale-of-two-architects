@@ -1,0 +1,53 @@
+body {
+    --utzon: #d55246;
+    --gehry: #4d79e7;
+    --bg: #1d232f;
+    --bg-dark: #0C111B;
+    color: #aab4b8;
+    background-color: var(--bg);
+}
+
+a {
+    color: #8FD1F6;
+}
+
+footer {
+    color: #839AAE;
+    background: var(--bg-dark);
+}
+
+footer h3 {
+    color: #BEC6CE;
+}
+
+.exposition {
+    color: rgb(221, 221, 221);
+}
+
+.utzon {
+    --color: var(--utzon);
+}
+
+.gehry {
+    --color: var(--gehry);
+}
+
+.narrative h2 {
+    color: var(--color);
+}
+
+.narrative h3 {
+    color: var(--color);
+}
+
+.narrationWrapper {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.gehry .narrationWrapper {
+    border-left: 4px solid var(--color);
+}
+
+.utzon .narrationWrapper {
+    border-right: 4px solid var(--color);
+}

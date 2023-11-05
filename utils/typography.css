@@ -1,0 +1,95 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+q,
+blockquote {
+    font-style: italic;
+}
+
+blockquote {
+    font-size: 1.15em;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding: 1em 0 0 1.5em;
+    color: rgb(250, 250, 230);
+}
+
+blockquote::before {
+    content: '\201C';
+    font-size: 2.5em;
+    opacity: 0.75;
+    position: absolute;
+    left: -1rem;
+}
+
+blockquote::after {
+    content: '\201D';
+    font-size: 2.5em;
+    opacity: 0.65;
+    position: absolute;
+    right: 0rem;
+    bottom: 0;
+}
+
+footer {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+}
+
+footer h3 {
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    padding: 1.5em 1em;
+}
+
+footer li {
+    margin-bottom: 0.75em;
+    line-height: 1.3em;
+}
+
+.exposition {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    padding: 3rem 0;
+}
+
+.exposition p:not(:first-child),
+.narrationWrapper p:not(:first-child) {
+    margin-top: 1em;
+}
+
+.narrative h2 {
+    font-size: 1.5rem;
+}
+
+.narrative h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+}
+
+.narrative p {
+    line-height: 1.75em;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
