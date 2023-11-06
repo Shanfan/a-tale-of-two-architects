@@ -1,4 +1,4 @@
-export const gehryNarratives = [
+export const gehryChapter1 = [
     {
         'year': 1929,
         'content': `
@@ -28,5 +28,39 @@ export const gehryNarratives = [
             Architecture degree.
         </p>
     `
+    }
+]
+
+export const gehryChapter2 = [
+    {
+        'year': 1956,
+        'content': `
+            <p>
+            In 1956, Gehry went to Harvard Graduate School of Design to study city planning, but left the program before completion.
+            </p>
+        `
     },
+    {
+        'year': 1962,
+        'content': `
+            <p>
+            In 1962, Gehry established his own firm.
+            </p>
+        `
+    },
+    {
+        'year': 1977,
+        'content': `
+            <p>
+            Early in his career, Gehry made friends with many contemporary artists in L.A and designed furniture to participate in art exhibitions. He wanted to express architecture more artistically too, but he was considered a “contractor’s architect”, and worked largely on generic developments. 
+            </p>
+            <p>
+            In 1977, Gehry and his wife Berta bought a bungalow in LA, originally built in 1920. Berta encouraged Gehry to fully exercise his creative ideas. This remodel became his first experimental design.
+            </p>
+            <p>
+            His home renovation gained him recognition from the architecture world. In the following decade, he began to receive more and more commissions to design imaginative structures.
+            </p>
+
+        `
+    }
 ]
