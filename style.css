@@ -19,10 +19,6 @@
     overflow: auto;
 }
 
-.narrationWrapper {
-    padding: 1em;
-}
-
 .title {
     position: relative;
     height: 100%;
@@ -58,4 +54,33 @@
 .scrollIndicator {
     text-align: center;
     margin-top: 2em;
+}
+
+.visNar {
+    position: relative;
+}
+
+.narrationWrapper {
+    position: absolute;
+    padding: 1em;
+}
+
+.narrationWrapperL {
+    width: 100%;
+}
+
+.narrationWrapperM {
+    width: 83%;
+}
+
+.narrationWrapperS {
+    width: 66%;
+}
+
+.narrationWrapperLeft {
+    right: 0;
+}
+
+.narrationWrapperRight {
+    left: 0;
 }
