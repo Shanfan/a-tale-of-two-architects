@@ -94,21 +94,19 @@ export const utzonChapter2 = [
         'content': `
             <p>
             In 1965, the Australian government changed hands. The newly elected Premier, Davis Hughes, campaigned on reigning in costs at the Opera House.
-            </p>
-        `
+            </p>`
     },
     {
         'year': 1966,
-        'content': `
-            <p>
-                In 1966, as tension between the government and the architect grew, Utzon was forced to quit. 
-            </p>
-            <p>
-                A government architect, Peter Hall, only agreed to continue the design work under the condition there was no possibility of Utzon returning. 
-            </p>
-            <p>
-            Utzon and his family boarded their flight back to Denmark just minutes before the doors closed to avoid the press.
-            </p>
+        'content': `<p>
+            In 1966, as tension between the government and the architect grew, Utzon was forced to quit. 
+        </p>
+        <p>
+            A government architect, Peter Hall, only agreed to continue the design work under the condition there was no possibility of Utzon returning. 
+        </p>
+        <p>
+        Utzon and his family boarded their flight back to Denmark just minutes before the doors closed to avoid the press.
+        </p>
         `
     },
     {

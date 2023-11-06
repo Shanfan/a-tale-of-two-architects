@@ -27,6 +27,12 @@ blockquote {
     font-style: italic;
 }
 
+svg text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
 blockquote {
     font-size: 1.15em;
     letter-spacing: 0.04em;
