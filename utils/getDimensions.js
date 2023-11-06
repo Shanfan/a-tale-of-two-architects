@@ -2,7 +2,7 @@ export default function (selector) {
     let el
 
     if (typeof selector === 'string') {
-        el = document.querySelector(selector)
+        el = document.querySelector(selector).getBoundingClientRect()
     } else if (selector instanceof HTMLElement) {
         el = selector.getBoundingClientRect()
     }

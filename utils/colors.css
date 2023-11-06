@@ -61,3 +61,9 @@ footer h3 {
 .utzon .narrationWrapper {
     border-right: 4px solid var(--color);
 }
+
+svg .utzon,
+svg .gehry {
+    fill: var(--color);
+    stroke: var(--color);
+}
