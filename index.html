@@ -45,111 +45,18 @@
                 </div>
             </section>
         </div>
-        <section class="narrative grid-12">
+        <section class="chapter1 narrative grid-12">
             <div class="grid__colspan_5 grid-6 utzon">
-                <div class="grid__colpush_1 grid__colspan_5">
-                    <div class="narrationWrapper">
-                        <h2>Jørn Utzon</h2>
-                        <h3>Danish Architect, 1918 ~ 2008</h3>
-                        <p>
-                            Jørn Utzon was born in Denmark. While in secondary school, he began helping his father,
-                            director
-                            of
-                            a
-                            shipyard,
-                            and a brilliant naval architect, by studying new designs, drawing up plans and making
-                            models. He
-                            thought
-                            he
-                            might train to be a naval architect like his father.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid__colspan_6">
-                    <div class="narrationWrapper">
-                        <p>
-                            Utzon’s uncle Einar Utzon-Frank was a sculptor and professor at the Royal Academy of Fine
-                            Arts.
-                            Under
-                            his influence, Utzon took an interest in sculpting. In 1937 he was admitted into the Royal
-                            Academy
-                            of Fine Arts in Copenhagen, and graduated with an architecture degree in 1942.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid__colspan_4 grid__colpush_2">
-                    <div class="narrationWrapper">
-                        <p>
-                            Utzon established his own firm in 1950.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid__colspan_6">
-                    <div class="narrationWrapper">
-                        <p>
-                            In 1952, Utzon built his family residence in Hellebæk, Denmark. This was Utzon’s first
-                            completed
-                            work, aside from a water tower in Svaneke. Utzon directed the construction work without any
-                            technical plans. As the building developed he would often change its shape, modifying its
-                            design.
-                        </p>
-                        <p>
-                            He learned this approach in Finland in 1946 when he apprenticed under Alvar Aalto, who had
-                            used
-                            the same method
-                            for his Villa Mairea. While Aalto mained this method was the most economical solution for
-                            building a
-                            house, this way of working planted the seed for the bitter fruit that came after Utzon
-                            winning
-                            the
-                            commission of the Sydney Opera House.
-                        </p>
-                    </div>
-                </div>
             </div>
-
             <div class="grid__colspan_2 grid__colpush_5 visCanvas">
-                placeholder for visualization
+
             </div>
             <div class="grid__colspan_5 grid-6 gehry">
-                <div class="grid__colspan_5">
-                    <div class="narrationWrapper">
-                        <h2>Frank Gehry</h2>
-                        <h3>Canadian American Architect, 1929 ~</h3>
-                        <p>
-                            Frank Gehry was born in a working-class Jewish neighborhood of Toronto, Canada, in 1929. He
-                            remembered
-                            vividly
-                            watching carp swimming in the bathtub while his grandmother prepared to make gefilte fish in
-                            the
-                            kitchen.
-                            The
-                            fish form would later become a constant theme in his work.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid__colspan_6">
-                    <div class="narrationWrapper">
-                        <p>Gehry's family migrated to California from Toronto in 1947. He got a job driving a delivery
-                            truck
-                            and
-                            studied at LA City College. He tried ceramics, radio announcing and chemical engineering
-                            before
-                            he
-                            finally chose architecture.</p>
-                        <p>
-                            In 1954, Gehry graduated from University of Southern California with a Bachelor of
-                            Architecture
-                            degree.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class="exposition grid-12">
-            <div class="grid__colspan_6 grid__colpush_3">
+            <div id='temp' class="grid__colspan_6 grid__colpush_3">
                 <p>
                     Utzon completed his architectural training in Denmark during World War II when Germany occupied the
                     country. In the first two decades following his training, there were limited opportunities for
@@ -378,91 +285,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"
+        integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        function createLinks(content, href) {
-            const link = document.createElement('a')
-            link.href = href
-            link.target = "_blank"
-            link.innerHTML = content
+    <script type="module" src="render.js"></script>
 
-            return link
-        }
-
-        const references = [
-            {
-                'title': 'I&rsquo;m Frank Gehry, and This Is How I See the World - Los Angeles Times (1992)',
-                'href': 'https://www.latimes.com/archives/la-xpm-1998-oct-25-tm-35829-story.html'
-            },
-            {
-                'title': 'Frank Gehry, 1990 TED Talk, My Days as A Young Rebel',
-                'href': 'https://www.ted.com/talks/frank_gehry_my_days_as_a_young_rebel'
-            },
-            {
-                'title': 'The Software Behind Frank Gehry’s Geometrically Complex Architecture - Priceonomics',
-                'href': 'https://priceonomics.com/the-software-behind-frank-gehrys-geometrically/'
-            },
-            {
-                'title': 'Gehry Residence / Gehry Partners | ArchDaily',
-                'href': 'https://www.archdaily.com/67321/gehry-residence-frank-gehry'
-            },
-            {
-                'title': 'Walt Disney Concert Hall - Wikipedia',
-                'href': 'https://en.wikipedia.org/wiki/Walt_Disney_Concert_Hall'
-            },
-            {
-                'title': 'List of Works by Frank Gehry - Wikipedia',
-                'href': 'https://en.wikipedia.org/wiki/List_of_works_by_Frank_Gehry'
-            },
-            {
-                'title': 'Sydney Opera House - Wikipedia',
-                'href': 'https://en.wikipedia.org/wiki/Sydney_Opera_House'
-            },
-            {
-                'title': 'The Bilbao Effect : How the Design of a Museum Transformed The Economy of The City',
-                'href': 'https://www.snaptrude.com/blog/the-bilbao-effect-how-the-design-of-a-museum-transformed-the-economy-of-the-city'
-            },
-            {
-                'title': 'Sydney Opera House | Our Story',
-                'href': 'https://www.sydneyoperahouse.com/our-story/'
-            },
-            {
-                'title': 'Utzon’s Hellebæk Residence in Denmark by Jørn Utzon',
-                'href': 'https://archeyes.com/utzons-house-in-hellebaek-denmark-jorn-utzon/'
-            },
-            {
-                'title': 'Look inside Jørn Utzon&rsquo;s Can Lis Family House from the 70s in Mallorca',
-                'href': 'https://www.designboom.com/architecture/jorn-utzon-can-lis-family-home-mallorca-08-02-2019/'
-            },
-            {
-                'title': 'Can Feliz, Mallorca - Jørn Utzon | Arquitectura Viva',
-                'href': 'https://arquitecturaviva.com/works/can-feliz-9'
-            },
-            {
-                'title': 'AD Classics: Bagsværd Church / Jørn Utzon | ArchDaily',
-                'href': 'https://www.archdaily.com/160390/ad-classics-bagsvaerd-church-jorn-utzon'
-            },
-            {
-                'title': 'The Utzon Center: Jørn Utzon&rsquo;s Architectural Legacy in Aalborg',
-                'href': 'https://archeyes.com/utzon-center-aalborg-jorn-utzon/'
-            },
-            {
-                'title': "15 Iconic Projects by Jørn Utzon",
-                'href': 'https://www.re-thinkingthefuture.com/know-your-architects/a360-15-iconic-projects-by-jorn-utzon-architect-of-sydney-opera-house/'
-            },
-            {
-                'title': 'Architecture Classics: Kuwait National Assembly Building / Jørn Utzon | ArchDaily',
-                'href': 'https://www.archdaily.com/568821/ad-classics-kuwait-national-assembly-building-jorn-utzon'
-            }
-        ]
-
-        references.forEach(d => {
-            const link = createLinks(d.title, d.href)
-            const list = document.createElement('li')
-            list.append(link)
-            document.querySelector('.references').appendChild(list)
-        })
-    </script>
+    <!-- <script type="module" src="utils/mapNarratives.js"></script> -->
 </body>
 
 </html>

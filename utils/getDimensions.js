@@ -1,5 +1,12 @@
 export default function (selector) {
-    const el = document.querySelector(selector).getBoundingClientRect()
+    let el
+
+    if (typeof selector === 'string') {
+        el = document.querySelector(selector)
+    } else if (selector instanceof HTMLElement) {
+        el = selector.getBoundingClientRect()
+    }
+
     return {
         top: el.top,
         bottom: el.bottom,

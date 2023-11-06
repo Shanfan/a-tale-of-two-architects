@@ -1,59 +1,41 @@
-// import { PersonLifetime } from './utils/mapLifetime.js'
-// import { layYearMarks, renderWar } from './utils/mapMetaMarks.js'
-// import utzonData from './data/utzon.json' assert {type: "json"}
-// import gehryData from './data/gehry.json' assert {type: "json"}
-// import getDimensions from './utils/getDimensions.js'
-
+import getDimensions from './utils/getDimensions.js'
 import createRefLinks from "./utils/createRefLinks.js";
+import { utzonNarratives } from "../data/utzon.js";
+import { gehryNarratives } from "../data/gehry.js";
+import mapNarratives from "./utils/mapNarratives.js";
 
 
-// export const scale = d3.scaleLinear()
-//     .range([0, getDimensions('.visCanvas').height])
-//     .domain([1912, 2022])
 
-// export const utzonEvents = getEventsData(utzonData)
-// export const gehryEvents = getEventsData(gehryData)
 
-// function getEventsData(data) {
-//     const events = []
-//     events.push(data.birth, data.death, data.pritzker)
+// then, adjust their y position 
+// this will differ from chapter to chapter. 
+// So I think we should create a separate function 
 
-//     data.primeProject.events.forEach(d => {
-//         events.push({ "year": d.year, "description": d.description })
-//     })
+function mapChapter1() {
 
-//     if (data.secondaryProject) {
-//         data.secondaryProject.events.forEach(d => {
-//             events.push({ "year": d.year, "description": d.description })
-//         })
-//     }
+    mapNarratives('.chapter1 .utzon', utzonNarratives)
+    mapNarratives('.chapter1 .gehry', gehryNarratives, false)
+    const narrations = document.querySelectorAll('.chapter1 .narrationWrapper')
 
-//     data.otherEvents.forEach(d => {
-//         events.push({ "year": d.year, "description": d.description })
-//     })
+    let totalHeight = 0, years = []
 
-//     return events
-// }
+    narrations.forEach(el => {
+        totalHeight += getDimensions(el).height
+        years.push(+el.getAttribute('data-year'))
+    })
 
-// document.querySelector('.utzon.content p').innerHTML = utzonEvents.find(event => event.year === 1918).description
-// document.querySelector('.gehry.content p').innerHTML = gehryEvents.find(event => event.year === 1929).description
+    const scale = d3.scaleLinear()
+        .range([0, totalHeight])
+        .domain(d3.extent(years))
 
-// layYearMarks('.visCanvas .left .yearMarks', scale);
-// layYearMarks('.visCanvas .right .yearMarks', scale);
 
-// renderWar('.visCanvas .left .wwi', 1914, 1918, scale)
-// renderWar('.visCanvas .right .wwi', 1914, 1918, scale)
-// renderWar('.visCanvas .left .wwii', 1937, 1945, scale)
-// renderWar('.visCanvas .right .wwii', 1937, 1945, scale)
+    console.log(scale(1935))
 
-// const utzon = new PersonLifetime(utzonData, '.visCanvas .utzon', scale)
-// const gehry = new PersonLifetime(gehryData, '.visCanvas .gehry', scale)
+    // We need to have a 'scale' function
+    // The entire height should be the sum of all the narrativeWrappers heights
+    // the range should be the smallest year and the largest year.
+}
 
-// utzon.drawEvents('prime')
-// utzon.drawEvents('other')
-// gehry.drawEvents('prime')
-// gehry.drawEvents('secondary')
-// gehry.drawEvents('other')
-
+mapChapter1();
 
 createRefLinks('.references')
