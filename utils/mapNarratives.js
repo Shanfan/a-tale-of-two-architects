@@ -29,19 +29,6 @@ export default function drawVis(chapter, utzonData, gehryData, startEnd = null) 
         .range([0, visHeight])
         .domain(d3.extent(years))
 
-    utzonNarrations.forEach(el => {
-        el.classList.add('narrationWrapperLeft');
-        const year = +el.getAttribute('data-year')
-        const dist = scale(year) - getDimensions(el).height / 2
-        el.style.setProperty('top', `${dist}px`)
-    })
-
-    gehryNarrations.forEach(el => {
-        const year = +el.getAttribute('data-year')
-        const dist = scale(year) - getDimensions(el).height / 2
-        el.style.setProperty('transform', `translateY(${dist}px)`)
-    })
-
     const firstNarration = allNarations
         .find(el => el.getAttribute('data-year') == d3.min(years))
 
@@ -53,8 +40,18 @@ export default function drawVis(chapter, utzonData, gehryData, startEnd = null) 
         totalWidth = getDimensions(parentSelector + ' .visCanvas').width,
         totalHeight = visHeight + paddingTop + paddingBottom
 
-    document.querySelectorAll(parentSelector + ' .visNar')
-        .forEach(el => el.style.setProperty('transform', `translateY(${paddingTop}px)`))
+    utzonNarrations.forEach(el => {
+        el.classList.add('narrationWrapperLeft');
+        const year = +el.getAttribute('data-year')
+        const dist = scale(year) - getDimensions(el).height / 2 + paddingTop
+        el.style.setProperty('top', `${dist}px`)
+    })
+
+    gehryNarrations.forEach(el => {
+        const year = +el.getAttribute('data-year')
+        const dist = scale(year) - getDimensions(el).height / 2 + paddingTop
+        el.style.setProperty('transform', `translateY(${dist}px)`)
+    })
 
     const visCanvas = d3.select(parentSelector + ' .visCanvas').append('svg')
         .attr('width', '100%')
@@ -133,12 +130,6 @@ export default function drawVis(chapter, utzonData, gehryData, startEnd = null) 
         .attr('cy', d => scale(d))
 }
 
-
-
-
-
-
-
 function mapNarratives(selector, narratives) {
     const getSize = (n) => {
         if (n < 100) {
@@ -163,8 +154,4 @@ function mapNarratives(selector, narratives) {
 
         document.querySelector(selector).append(narrationWrapper);
     })
-
 }
-
-
-
