@@ -11,5 +11,10 @@ drawVis("chapter5", utzonChapter5, gehryChapter5, 'end');
 
 createRefLinks('.references')
 
-// window resize event listener; do all the renderings again.
-// window.addEventListener('resize', drawVisualization);
+window.addEventListener('resize', () => {
+    drawVis("chapter1", utzonChapter1, gehryChapter1, 'start');
+    drawVis("chapter2", utzonChapter2, gehryChapter2);
+    drawVis("chapter3", utzonChapter3, gehryChapter3);
+    drawVis("chapter4", utzonChapter4, gehryChapter4);
+    drawVis("chapter5", utzonChapter5, gehryChapter5, 'end');
+})

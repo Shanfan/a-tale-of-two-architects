@@ -3,6 +3,12 @@ import getDimensions from './getDimensions.js'
 export default function drawVis(chapter, utzonData, gehryData, startEnd = null) {
     const parentSelector = "." + chapter
 
+    document.querySelector(parentSelector).innerHTML = `
+        <div class="grid__colspan_5 visNar utzon"></div>
+        <div class="grid__colspan_2 grid__colpush_5 visCanvas"></div>
+        <div class="grid__colspan_5 visNar gehry"></div>
+    `
+
     mapNarratives(parentSelector + ' .utzon', utzonData)
     mapNarratives(parentSelector + ' .gehry', gehryData)
 
