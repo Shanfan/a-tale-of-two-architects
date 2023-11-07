@@ -10,6 +10,23 @@
     transition: 0.3s all ease-in-out;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+.viewport {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewport header {
+    flex-grow: 1;
+}
+
 .heroImg {
     background-image: url('./assets/heroImg.jpg');
     background-size: cover;

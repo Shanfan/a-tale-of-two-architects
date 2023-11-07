@@ -38,7 +38,6 @@ blockquote {
     letter-spacing: 0.04em;
     position: relative;
     padding: 1em 0 0 1.5em;
-    color: rgb(250, 250, 230);
 }
 
 blockquote::before {

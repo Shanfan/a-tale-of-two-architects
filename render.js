@@ -1,129 +1,15 @@
 import { utzonChapter1, utzonChapter2, utzonChapter3, utzonChapter4, utzonChapter5 } from "../data/utzon.js";
 import { gehryChapter1, gehryChapter2, gehryChapter3, gehryChapter4, gehryChapter5 } from "../data/gehry.js";
-import getDimensions from './utils/getDimensions.js'
 import createRefLinks from "./utils/createRefLinks.js";
-import mapNarratives from "./utils/mapNarratives.js";
+import drawVis from "./utils/mapNarratives.js";
 
-// render function should run on window change, 
-// so that all the positioning gets recalculated 
-
-function drawVis(chapter, utzonData, gehryData) {
-    const parentSelector = "." + chapter
-
-    mapNarratives(parentSelector + ' .utzon', utzonData)
-    mapNarratives(parentSelector + ' .gehry', gehryData)
-
-    const gehryNarrations = document.querySelectorAll(parentSelector + ' .gehry .narrationWrapper')
-    const utzonNarrations = document.querySelectorAll(parentSelector + ' .utzon .narrationWrapper')
-    const allNarations = Array.from(document.querySelectorAll(parentSelector + ' .narrationWrapper'))
-
-    const narrationGap = 15
-    let visHeight = 0, utzonYears = [], gehryYears = []
-
-    utzonNarrations.forEach(el => {
-        visHeight += getDimensions(el).height
-        utzonYears.push(+el.getAttribute('data-year'))
-    })
-
-    gehryNarrations.forEach(el => {
-        visHeight += getDimensions(el).height
-        gehryYears.push(+el.getAttribute('data-year'))
-    })
-
-    const years = utzonYears.concat(gehryYears)
-
-    const scale = d3.scaleLinear()
-        .range([0, visHeight])
-        .domain(d3.extent(years))
-
-    utzonNarrations.forEach(el => {
-        el.classList.add('narrationWrapperLeft');
-        const year = +el.getAttribute('data-year')
-        const dist = scale(year) - getDimensions(el).height / 2
-        el.style.setProperty('top', `${dist}px`)
-    })
-
-    gehryNarrations.forEach(el => {
-        const year = +el.getAttribute('data-year')
-        const dist = scale(year) - getDimensions(el).height / 2
-        el.style.setProperty('transform', `translateY(${dist}px)`)
-    })
-
-    const firstNarration = allNarations
-        .find(el => el.getAttribute('data-year') == d3.min(years))
-
-    const lastNarration = allNarations
-        .find(el => el.getAttribute('data-year') == d3.max(years))
-
-
-    const paddingTop = getDimensions(firstNarration).height / 2 + narrationGap,
-        paddingBottom = getDimensions(lastNarration).height / 2 + narrationGap,
-        totalWidth = getDimensions(parentSelector + ' .visCanvas').width,
-        totalHeight = visHeight + paddingTop + paddingBottom
-
-    document.querySelectorAll(parentSelector + ' .visNar').forEach(el => el.style.setProperty('transform', `translateY(${paddingTop}px)`))
-
-    const visCanvas = d3.select(parentSelector + ' .visCanvas').append('svg')
-        .attr('width', '100%')
-        .attr('height', totalHeight)
-        .append('g')
-
-    const utzonLife = visCanvas.append('g').attr('class', 'utzon')
-        .style('transform', `translateX(${narrationGap}px)`)
-
-    utzonLife.append('path')
-        .attr('d', `M0,0 V${totalHeight}`)
-        .attr('stroke-width', '1')
-
-    utzonLife.append('g').attr('class', 'yearMarks')
-        .style('transform', `translateY(${paddingTop}px)`)
-        .selectAll('text')
-        .data(utzonYears)
-        .join('text')
-        .text(d => d)
-        .attr('x', 8)
-        .attr('y', d => scale(d))
-
-    utzonLife.append('g').attr('class', 'milestones')
-        .style('transform', `translateY(${paddingTop}px)`)
-        .selectAll('circle')
-        .data(utzonYears)
-        .join('circle')
-        .attr('r', 4)
-        .attr('cx', 0)
-        .attr('cy', d => scale(d))
-
-    const gehryLife = visCanvas.append('g').attr('class', 'gehry')
-        .style('transform', `translateX(${totalWidth - narrationGap}px)`)
-
-    gehryLife.append('path')
-        .attr('d', `M0,0 V${totalHeight}`)
-        .attr('stroke-width', '1')
-
-    gehryLife.append('g').attr('class', 'yearMarks')
-        .style('transform', `translateY(${paddingTop}px)`)
-        .selectAll('text')
-        .data(gehryYears)
-        .join('text')
-        .text(d => d)
-        .attr('x', -8)
-        .attr('y', d => scale(d))
-        .attr('text-anchor', 'end')
-
-    gehryLife.append('g').attr('class', 'milestones')
-        .style('transform', `translateY(${paddingTop}px)`)
-        .selectAll('circle')
-        .data(gehryYears)
-        .join('circle')
-        .attr('r', 4)
-        .attr('cx', 0)
-        .attr('cy', d => scale(d))
-}
-
-drawVis("chapter1", utzonChapter1, gehryChapter1);
+drawVis("chapter1", utzonChapter1, gehryChapter1, 'start');
 drawVis("chapter2", utzonChapter2, gehryChapter2);
 drawVis("chapter3", utzonChapter3, gehryChapter3);
 drawVis("chapter4", utzonChapter4, gehryChapter4);
-drawVis("chapter5", utzonChapter5, gehryChapter5);
+drawVis("chapter5", utzonChapter5, gehryChapter5, 'end');
 
 createRefLinks('.references')
+
+// window resize event listener; do all the renderings again.
+// window.addEventListener('resize', drawVisualization);

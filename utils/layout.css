@@ -74,20 +74,3 @@
 .grid__colpush_10 {
     grid-column-start: col 11;
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: var(--maxWidth);
-    margin: 0 auto;
-}
-
-.viewport {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.viewport header {
-    flex-grow: 1;
-}
