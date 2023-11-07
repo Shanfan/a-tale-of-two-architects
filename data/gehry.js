@@ -64,3 +64,110 @@ export const gehryChapter2 = [
         `
     }
 ]
+
+export const gehryChapter3 = [
+    {
+        'year': 1987,
+        'content': `<p>
+            In 1987, the Disney Concert Hall project was initiated. At this time, Gehry was known for using cheap materials to produce a post-industrial deconstruction design. While he always loved arts and music venues, he didn’t think he would win commission from Disney. Nevertheless, he submitted his design and won the competition in 1988. 
+        </p><p>
+            This design continued his signature theme of the deconstruction of the form, but the facade called for a bright stoney texture. The structure stood out as elegant as the Disney family wanted.
+        </p>`
+    },
+    {
+        'year': 1989,
+        'content': `<p>🏆 Gehry was awarded the prestigious Pritzker Architecture Prize.</p>`
+    },
+    {
+        'year': 1991,
+        'content': `<p>
+            In 1991, the Bilbao government pitched to the Guggenheim Foundation to build a museum in their city. They wanted this building to do for Bilbao what Sydney Opera House did for Australia. The Guggenheim Foundation selected Gehry to be the architect.
+        </p>`
+    },
+    {
+        'year': 1992,
+        'content': `<p>
+        In 1992, the underground parking garage of the Disney Concert Hall began construction, and was completed in 1996. It went way beyond the budget and drained the funding.
+        </p>`
+    },
+    {
+        'year': 1993,
+        'content': `<p>
+        The Bilbao Guggenheim project broke ground in 1993. Learned his lesson from the Disney Concert Hall project, Gehry carefully evaluated the stakeholders' expectations before he proposed the design. And yes, by this time, his firm had begun utilizing CAD software to ensure design precision.
+        </p>`
+    },
+    {
+        'year': 1995,
+        'content': `<p>
+        The construction of the concert hall stalled from 1994 to 1996, due to a lack of fundraising.
+        </p>`
+    },
+    {
+        'year': 1997,
+        'content': `<p>
+        In 1997, Bilbao Guggenheim Museum was completed early on schedule and slightly under budget. This project established Frank Gehry as <i>the</i> architect who would deliver an audacious design on time and on budget. The design and construction cost about $100 million, and in the first three years the museum had already generated €500 million in economic activity.
+        </p>`
+    }
+]
+
+export const gehryChapter4 = [
+    {
+        'year': 1996,
+        'content': `
+        <p>
+        Fundraising for the Disney Concert Hall restarted in 1996. 
+        </p>
+        `
+    },
+    {
+        'year': 1999,
+        'content': `
+        <p>
+        Groundbreaking for the hall was held in 1999. 
+        </p>
+        `
+    },
+    {
+        'year': 2003,
+        'content': `
+        <p>
+        In 2003, the Disney Concert Hall project was finally completed.
+        </p>
+        `
+    }
+]
+
+export const gehryChapter5 = [
+    {
+        'year': 2004,
+        'content': `<p>
+        In 2004, Gehry’s firm completed Ray and Maria Stata Center at MIT, Cambridge, MA, Jay Pritzker Pavilion and BP Pedestrian Bridge at at Millennium Park, Chicago, IL.
+        </p>`
+    },
+    {
+        'year': 2005,
+        'content': `<p>
+        In 2005, Gehry’s firm completed MARTa contemporary art museum in Herford, Germany, and IAC/InterActiveCorp West Coast Headquarters in California. 
+        </p>`
+    },
+    {
+        'year': 2006,
+        'content': `<p>
+        In 2006, Gehry’s firm completed Marqués de Riscal Hotel in Elciego, Spain.
+        </p>`
+    },
+    {
+        'year': 2007,
+        'content': `<p>
+        In 2007, Gehry’s firm completed IAC Building in Chelsea, Manhattan, New York and Mariza show stage, at the Walt Disney Concert Hall, Los Angeles, CA.
+        </p>`
+    },
+    {
+        'year': 2008,
+        'content': `<p>
+        In 2008, Gehry’s firm completed Art Gallery of Ontario, Toronto, Canada, Peter B. Lewis Library at Princeton University, NJ and Serpentine Gallery 2008 summer Pavilion, London, England.
+        </p>
+        <p>The list continues.</p>`
+    }
+
+]

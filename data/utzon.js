@@ -137,3 +137,60 @@ export const utzonChapter2 = [
         `
     }
 ]
+
+export const utzonChapter3 = [
+    {
+        'year': 1982,
+        'content': `
+            <p>
+            In 1982, the Kuwait National Assembly Building opened. It was yet another project heavily influenced by political motivations, designed by Jørn Utzon in 1972, and was completed in 1982 under the direction of his son Jan Utzon.
+            </p>
+        `
+    },
+    {
+        'year': 1994,
+        'content': `
+            <p>
+                As time went by, as happened with the few other works by Utzon, his private residence Can Lis on Mallorca island became a pilgrimage site for architects and admirers. 
+            </p>
+            <p>
+                To avoid unwanted attention, the family decided to move to a more remote location on the same island, and there he built another masterpiece, Can Feliz, in 1994.
+            </p>
+        `
+    }
+]
+
+export const utzonChapter4 = [
+    {
+        'year': 2003,
+        'content': `
+            <p>
+            🏆 Utzon was awarded the prestigious Pritzker Architecture Prize.
+            </p>
+        `
+    }
+]
+
+export const utzonChapter5 = [
+    {
+        'year': 2004,
+        'content': `<p>
+        In 2004, the Reception Hall of the Sydney Opera House was redesigned by Utzon, and was renamed the Utzon Room in his honor.
+        </p>`
+    },
+    {
+        'year': 2007,
+        'content': `<p>
+        In 2007, Sydney Opera House was declared a World Heritage Site. Utzon became the second living architect to have received such recognition.
+        </p>`
+    },
+    {
+        'year': 2008,
+        'content': `<p>Utzon passed away in 2008. Among the 15 most iconic projects under Jørn Utzon’s name, 3 are his own residence. </p>
+        <p>The Utzon Center, unveiled in the same year, is the last architecture designed by Jørn Uzon, in close collaboration with his son Kim Utzon, located in his childhood hometown Aalborg, Denmark. It was dedicated to the arts and education of architecture.
+        </p>
+        <p>
+        Jørn Utzon was survived by his wife, children and grandchildren. Both his sons, Jan and Kim, are trained architects and his daughter, Lin is a designer, muralist and artist.
+        </p>`
+    }
+]
