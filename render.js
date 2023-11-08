@@ -1,5 +1,5 @@
-import { utzonChapter1, utzonChapter2, utzonChapter3, utzonChapter4, utzonChapter5 } from "../data/utzon.js";
-import { gehryChapter1, gehryChapter2, gehryChapter3, gehryChapter4, gehryChapter5 } from "../data/gehry.js";
+import { utzonChapter1, utzonChapter2, utzonChapter3, utzonChapter4, utzonChapter5 } from "/data/utzon.js";
+import { gehryChapter1, gehryChapter2, gehryChapter3, gehryChapter4, gehryChapter5 } from "/data/gehry.js";
 import createRefLinks from "./utils/createRefLinks.js";
 import drawVis from "./utils/mapNarratives.js";
 
