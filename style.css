@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.3s all ease-in-out;
 }
 
 nav {
@@ -48,7 +47,7 @@ nav {
     z-index: 1;
 }
 
-.title:before {
+.title .before {
     content: '';
     width: 400px;
     height: 60px;
@@ -58,7 +57,7 @@ nav {
     transform: translate(-40%, -1em);
 }
 
-.title:after {
+.title .after {
     content: '';
     width: 400px;
     height: 60px;
@@ -71,6 +70,7 @@ nav {
 .scrollIndicator {
     text-align: center;
     margin-top: 2em;
+    animation: pounding 1s alternate-reverse infinite linear;
 }
 
 .visNar {
@@ -100,4 +100,20 @@ nav {
 
 .narrationWrapperRight {
     left: 0;
+}
+
+.narrationWrapper li {
+    margin-bottom: 0.75em;
+    list-style-position: inside;
+}
+
+
+@keyframes pounding {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(50%);
+    }
 }

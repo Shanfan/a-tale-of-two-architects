@@ -140,7 +140,7 @@ function mapNarratives(selector, narratives) {
     const getSize = (n) => {
         if (n < 100) {
             return 'narrationWrapperS'
-        } else if (n > 550) {
+        } else if (n > 450) {
             return 'narrationWrapperL'
         } else {
             return 'narrationWrapperM'

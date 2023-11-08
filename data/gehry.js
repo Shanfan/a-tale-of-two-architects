@@ -67,6 +67,27 @@ export const gehryChapter2 = [
 
 export const gehryChapter3 = [
     {
+        'year': 1981,
+        'content': `<p>Cabrillo Marine Aquarium in San Pedro California was completed.</p>`
+    },
+    {
+        'year': 1984,
+        'content': `<p>Completed: </p>
+        <ul>
+            <li>California Aerospace Museum, California Museum of Science and Industry, in Los Angeles California</li>
+            <li>Edgemar Retail Complex, Santa Monica California</li>
+            <li>Norton House, Venice, California</li>
+            </ul>`
+    },
+    {
+        'year': 1985,
+        'content': `<p>Completed: Frances Howard Goldwyn Hollywood Regional Library, Hollywood, California</p>`
+    },
+    {
+        'year': 1986,
+        'content': `<p>Completed: Information and Computer Science (ICS)/Engineering Research Facility, UC Irvine </p>`
+    },
+    {
         'year': 1987,
         'content': `<p>
             In 1987, the Disney Concert Hall project was initiated. At this time, Gehry was known for using cheap materials to produce a post-industrial deconstruction design. While he always loved arts and music venues, he didn’t think he would win commission from Disney. Nevertheless, he submitted his design and won the competition in 1988. 
@@ -76,7 +97,8 @@ export const gehryChapter3 = [
     },
     {
         'year': 1989,
-        'content': `<p>🏆 Gehry was awarded the prestigious Pritzker Architecture Prize.</p>`
+        'content': `<p>🏆 Gehry was awarded the prestigious Pritzker Architecture Prize.</p> 
+        <p>Also, three more buildings under Gehry's name were completed in California, Connecticut and Germany</p>`
     },
     {
         'year': 1991,
@@ -105,7 +127,9 @@ export const gehryChapter3 = [
     {
         'year': 1997,
         'content': `<p>
-        In 1997, Bilbao Guggenheim Museum was completed early on schedule and slightly under budget. This project established Frank Gehry as <i>the</i> architect who would deliver an audacious design on time and on budget. The design and construction cost about $100 million, and in the first three years the museum had already generated €500 million in economic activity.
+        In 1997, Bilbao Guggenheim Museum was completed early on schedule and slightly under budget.</p> 
+        <p>This project established Frank Gehry as <i>the</i> architect who would deliver an audacious design on time and on budget.</p> 
+        <p>The design and construction cost about $100 million, and in the first three years the museum had already generated €500 million in economic activity.
         </p>`
     }
 ]
